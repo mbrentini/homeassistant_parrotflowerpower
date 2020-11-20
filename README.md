@@ -13,7 +13,9 @@ sensor:
     scan_interval: 1800
 ```
 
-Values :
+- Reboot Home Assistant
+
+Values for config :
 ```yaml
 mac: the MAC address of the sensor
 name: the name of the sensor
