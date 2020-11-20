@@ -12,5 +12,7 @@ sensor:
     scan_interval: 1800
     
 mac: the MAC address of the sensor
+
 name: the name of the sensor
+
 scan_interval: refresh interval in seconds (e.g. 1800 = every 30 mn)
