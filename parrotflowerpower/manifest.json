@@ -1,0 +1,8 @@
+{
+  "domain": "parrotflowerpower",
+  "name": "Parrot Flower Power BLE sensor integration",
+  "documentation": "https://github.com/mbrentini/homeassistant_parrotflowerpower",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@mbrentini"]
+}
