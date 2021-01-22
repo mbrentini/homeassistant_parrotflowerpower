@@ -16,7 +16,7 @@ HANDLES = [
     ["soil_temperature", 0x002d],
     ["air_temperature", 0x0031],
     ["moisture", 0x0035],
-    ["moisture_cal", 0x0041],
+    ["moisture_cal", 0x003f],
     ["led", 0x003c]
 ]
 
