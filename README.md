@@ -3,7 +3,7 @@
 It's sketchy but it works.
 
 Usage : 
-- Copy folder "parrotflowerpower" to /config
+- Copy folder "parrotflowerpower" to /custom_components
 - Edit configuration.yaml by adding :
 
 ```yaml
