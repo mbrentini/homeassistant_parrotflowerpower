@@ -11,6 +11,8 @@ from homeassistant.const import (
     CONF_SCAN_INTERVAL, EVENT_HOMEASSISTANT_START)
 from homeassistant.core import callback
 
+from .const import DOMAIN
+
 _LOGGER = logging.getLogger(__name__)
 
 CONF_ADAPTER = 'adapter'
@@ -48,6 +50,9 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Optional(CONF_ADAPTER, default=DEFAULT_ADAPTER): cv.string,
 })
 
+async def async_setup_entry(hass, config_entry, async_add_devices):
+    instance = hass.data[DOMAIN][config_entry.entry_id]
+    async_add_devices([ParrotFlowerPowerSensor(instance, config_entry.data["name"], config_entry.entry_id)])
 
 async def async_setup_platform(hass, config, async_add_entities,
                                discovery_info=None):

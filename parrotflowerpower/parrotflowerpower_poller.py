@@ -39,7 +39,7 @@ class ParrotFlowerPowerPoller(object):
         self._last_read = None
         self._fw_last_read = None
         self.retries = retries
-        self.ble_timeout = 10
+        self.ble_timeout = 30
         self.lock = Lock()
 
     
@@ -95,8 +95,8 @@ class ParrotFlowerPowerPoller(object):
                         if rawValue == 65535:
                             value2report = 0
                         else:
-                            #value2report = 80000000 * (math.pow(rawValue, -1.063)) # from https://www.fanjoe.be/?p=3520
-                            value2report = 0.08640000000000001 * (192773.17000000001 * math.pow(rawValue, -1.0606619))
+                            value2report = 80000000 * (math.pow(rawValue, -1.063)) # from https://www.fanjoe.be/?p=3520
+                            #value2report = 0.08640000000000001 * (192773.17000000001 * math.pow(rawValue, -1.0606619))
                     elif data2read in ["soil_temperature", "air_temperature"]:
                         value2report = 0.00000003044 * math.pow(rawValue, 3.0) - 0.00008038 * math.pow(rawValue, 2.0) + rawValue * 0.1149 - 30.449999999999999
                         if value2report < -10.0:
